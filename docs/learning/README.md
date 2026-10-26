@@ -42,7 +42,7 @@
   - 理解 Hopper 新特性（TMA、WGMMA、mbarrier、cluster、chiplet）怎样建模；
   - 了解 PTX 执行驱动模式的实现；
   - 最终能改模型做研究。
-- 参考书 / 资料：《General-Purpose Graphics Processor Architectures》（Aamodt、Fung、Rogers，2018，作者即 GPGPU-Sim / Accel-Sim 作者）；NVIDIA CUDA C++ Programming Guide；NVIDIA Volta / Hopper 架构白皮书。笔记会注明对应章节，但不依赖它们也能读懂。
+- 参考书 / 资料：《General-Purpose Graphics Processor Architectures》（Aamodt、Fung、Rogers，2018，作者即 GPGPU-Sim / Accel-Sim 作者）；NVIDIA CUDA C++ Programming Guide；NVIDIA Volta / Hopper 架构白皮书。笔记会注明对应章节，但不依赖它们也能读懂。教材与阶段的对应：第 1–2 章（GPU 基础、编程模型、ISA）→ 00；第 3 章（SIMT core：SIMT 栈、warp 调度、operand collector）→ 04、05；第 4 章（L1/shared、互连、memory partition、L2、DRAM 调度）→ 06、07；§5.1（CTA 分配、调度、多 kernel）→ 03、04。Hopper（09）不在教材范围内，以 NVIDIA 白皮书和 Accel-Sim 2.0 论文为准。
 - 标记：所有内容对读者都是新的，所以不使用 🆕，只用 ✅（从代码或配置直接读出）和 ❓（待核实）。
 - 约束：长期投入，路线按细粒度拆。
 

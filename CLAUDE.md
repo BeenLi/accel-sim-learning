@@ -9,3 +9,4 @@
 
 - Write them with the repo-learning-path skill (https://github.com/BeenLi/arch-reading-skills/tree/main/skills/repo-learning-path); naming, links, figures, link check and index sync all follow it.
 - Before writing, read `docs/learning/README.md` §1–2 for the reader's background, references, markers (✅/❓ only, no 🆕) and note structure (concept → code → verify).
+- Textbook (Aamodt et al. 2018) is local at `docs/learning/supplements/`: the PDF plus `gpgpu-arch-book.txt` for grep; PDF page = book page + 20. It is copyrighted and gitignored: never commit it, never copy its figures into `figs/`, quote only a sentence or two; cite as "教材 §3.3（p.35）".
