@@ -85,6 +85,7 @@
 - [ ] 配置系统：`option_parser`、`gpgpusim.config` 与 `trace.config` 的分工、`define-standard-cfgs.yml`
 - [ ] 跑一次仿真：`run_simulations.py`、运行目录结构、`justrun.sh`、输出日志的结构
 - [ ] 收集统计与 correlation：`get_stats.py`、`util/plotting/`、和 QV100 真机数据对比
+- [ ] 动手：给本仓库写自己的 CI（格式检查 → 在上游 Docker 镜像里构建 → QV100 SASS 冒烟测试），替换依赖 Purdue 自托管 runner 的上游工作流；已核实的前提和方案见仓库根目录 `CLAUDE.md` 的 "Pending: our own CI"
 
 ### 第 02 步：代码骨架与顶层数据流
 
