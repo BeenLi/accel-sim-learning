@@ -8,7 +8,7 @@ execute_process(
 
 # Get diff
 execute_process(
-    COMMAND git diff --numstat
+    COMMAND git diff --numstat -- .
     COMMAND wc
     COMMAND sed -re "s/^\\s+([0-9]+).*/\\1./"
     WORKING_DIRECTORY ${INPUT_DIR}
@@ -16,7 +16,7 @@ execute_process(
     OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 execute_process(
-    COMMAND git diff --numstat --staged
+    COMMAND git diff --numstat --staged -- .
     COMMAND wc
     COMMAND sed -re "s/^\\s+([0-9]+).*/\\1./"
     WORKING_DIRECTORY ${INPUT_DIR}
