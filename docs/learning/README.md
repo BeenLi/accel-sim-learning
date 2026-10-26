@@ -8,7 +8,7 @@
 
 ## 0. 仓库速览（2026-10-26 勘察，只读）
 
-勘察时的版本：Accel-Sim `c5e0872`；GPGPU-Sim 已原样固定进本仓库（上游 `accel-sim/gpgpu-sim_distribution` dev @ `91880c53`，本仓库提交 `b357625`）。行号以此为准。本仓库只在本地迭代，不跟踪上游。
+勘察时的版本：Accel-Sim `c5e0872`；GPGPU-Sim 已原样固定进本仓库（上游 `accel-sim/gpgpu-sim_distribution` dev @ `91880c53`，本仓库提交 `b357625`）。行号以此为准。本仓库不跟踪上游，个人 GitHub 远端只作备份。
 
 | 部分 | 位置 | 规模 | 备注 |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@
 | 画图 / correlation | [`util/plotting/`](../../util/plotting/)、[`util/hw_stats/`](../../util/hw_stats/) | 约 2.4k 行 Python | 仿真 vs 真机对比 |
 | 调参 / 功耗脚本 | [`util/tuner/`](../../util/tuner/)、[`util/accelwattch/`](../../util/accelwattch/) | | |
 
-- 构建：`source gpu-simulator/setup_environment.sh` 后用 CMake 构建，见 [`README.md`](../../README.md) 的 Quick Start；本地已有 `gpu-simulator/bin/release/accel-sim.out`。
+- 构建：`source gpu-simulator/setup_environment.sh` 后用 CMake 构建，见原版 README [`README-accel-sim.md`](../../README-accel-sim.md) 的 Quick Start；本地已有 `gpu-simulator/bin/release/accel-sim.out`。
 - 跑仿真：[`util/job_launching/run_simulations.py`](../../util/job_launching/run_simulations.py)。
 - 抓 trace：[`util/tracer_nvbit/run_hw_trace.py`](../../util/tracer_nvbit/run_hw_trace.py)。
 - 本地数据：`hw_run/` 下有 CUDA 11.0 的 rodinia_2.0-ft、ubench trace 和 QV100 真机统计（该目录被 `.gitignore` 忽略，链接只在本机有效）。
@@ -185,7 +185,7 @@
 | --- | --- |
 | 学习笔记：00 GPU 基础 | [00 总览](00-0-gpu-basics-overview.md)（进行中） |
 | 图源说明 | [`figs/README.md`](figs/README.md) |
-| 仓库自带文档 | [`README.md`](../../README.md)、[`release.notes.md`](../../release.notes.md)、[`gpgpu-sim4.md`](../../gpu-simulator/gpgpu-sim4.md)、[`AccelWattch.md`](../../AccelWattch.md) |
+| 仓库自带文档 | [`README-accel-sim.md`](../../README-accel-sim.md)（原版 README）、[`release.notes.md`](../../release.notes.md)、[`gpgpu-sim4.md`](../../gpu-simulator/gpgpu-sim4.md)、[`AccelWattch.md`](../../AccelWattch.md) |
 | 各工具说明 | [`util/tracer_nvbit/README.md`](../../util/tracer_nvbit/README.md)、[`util/job_launching/README.md`](../../util/job_launching/README.md)、[`util/plotting/README.md`](../../util/plotting/README.md)、[`util/tuner/README.md`](../../util/tuner/README.md) |
 | 论文 | Accel-Sim 2.0（[arXiv 2608.22602](https://arxiv.org/abs/2608.22602)）、Accel-Sim ISCA'20（[PDF](https://people.ece.ubc.ca/~aamodt/publications/papers/accelsim.isca2020.pdf)）、AccelWattch MICRO'21（[PDF](http://paragon.cs.northwestern.edu/papers/2021-MICRO-AccelWattch-Kandiah.pdf)） |
 | 教材 | Aamodt, Fung, Rogers,《General-Purpose Graphics Processor Architectures》, Morgan & Claypool, 2018 |

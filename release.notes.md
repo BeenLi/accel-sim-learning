@@ -15,7 +15,7 @@ CUPTI-based tool for cycle-level hardware correlation.
 > support are incoming shortly.
 
 Work that uses any part of Accel-Sim should cite both the Accel-Sim 1.0 and 2.0 papers (plus
-GPGPU-Sim) — see the "How to Cite" section in the [README](README.md) for the full guide.
+GPGPU-Sim) — see the "How to Cite" section in the [README](README-accel-sim.md) for the full guide.
 
 ## Table 1 — Hopper H100: Accel-Sim 1.x baseline vs. features added in Accel-Sim 2.0
 

@@ -10,12 +10,12 @@ This file provides guidance for working with code in this repository.
 
 ## Repository Structure
 
-This repository contains **two separate git repositories**:
+This is a **single git repository** used for self-study. It does not track or contribute to upstream accel-sim; a personal GitHub repo is used only as a backup remote:
 
 1. **Accel-Sim Framework** (root directory): The main framework for GPU simulation and validation
-2. **GPGPU-Sim** (nested at `gpu-simulator/gpgpu-sim/`): A submodule that provides the core performance model
+2. **GPGPU-Sim** (at `gpu-simulator/gpgpu-sim/`): The core performance model, **vendored** (committed directly into this repo) at upstream `accel-sim/gpgpu-sim_distribution` dev @ `91880c53`. It has no `.git` of its own; commits touching it go into this repository. The original gpgpu-sim history is backed up at `../gpgpu-sim.git-backup-91880c53`, a sibling directory of the repo root (use `git --git-dir=../gpgpu-sim.git-backup-91880c53 log -- <file>`).
 
-When making changes or commits, be aware of which repository you are working in. The `gpu-simulator/gpgpu-sim/` directory has its own `.git` and should be treated as a separate project.
+The `.github/` CI scripts still try to clone gpgpu-sim; they are unused here.
 
 ## Build System
 
