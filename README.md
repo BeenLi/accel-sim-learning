@@ -37,7 +37,7 @@
 
 ## 仓库目录
 
-```
+```text
 .
 ├── README.md                  本文件：仓库说明与目录
 ├── README-accel-sim.md        Accel-Sim 原版 README

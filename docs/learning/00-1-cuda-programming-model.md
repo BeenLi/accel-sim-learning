@@ -18,7 +18,7 @@
 
 GPU 程序从 CPU 开始执行。CPU 端的代码（叫 **host** 代码）做三件事：在 GPU 显存里分配空间、把输入数据拷进去、启动一个 **kernel**（在 GPU 上运行的函数）。这就是教材 §2.1（p.9）开头描述的流程。下面是一个向量加法的例子：
 
-```cuda
+```cpp
 __global__ void vadd(int n, const float *a, const float *b, float *c) {
   int i = blockIdx.x * blockDim.x + threadIdx.x;   // 我是第几个线程
   if (i < n) c[i] = a[i] + b[i];                   // 每个线程只算一个元素
