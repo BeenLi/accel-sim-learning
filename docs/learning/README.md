@@ -85,7 +85,13 @@
 - [ ] 配置系统：`option_parser`、`gpgpusim.config` 与 `trace.config` 的分工、`define-standard-cfgs.yml`
 - [ ] 跑一次仿真：`run_simulations.py`、运行目录结构、`justrun.sh`、输出日志的结构
 - [ ] 收集统计与 correlation：`get_stats.py`、`util/plotting/`、和 QV100 真机数据对比
-- [ ] 动手：给本仓库写自己的 CI（格式检查 → 在上游 Docker 镜像里构建 → QV100 SASS 冒烟测试），替换依赖 Purdue 自托管 runner 的上游工作流；已核实的前提和方案见仓库根目录 `CLAUDE.md` 的 "Pending: our own CI"
+- [ ] 动手：给本仓库写自己的 CI（格式检查 → 在上游 Docker 镜像里构建 → QV100 SASS 冒烟测试），替换依赖 Purdue 自托管 runner 的上游工作流，完成后重新打开仓库的 Actions。2026-10-26 已核实的前提：
+  - 格式检查：`pip install clang-format==16.0.6` 后运行三个 `format-code.sh`（accel-sim、tracer、gpgpu-sim），当前代码没有任何改动，可以直接通过。
+  - 镜像 `ghcr.io/accel-sim/accel-sim-framework:ubuntu-24.04-cuda-12.8-minimal` 可匿名拉取；本机有 docker，可以先在同一镜像里本地试跑。
+  - trace：`https://engineering.purdue.edu/tgrogers/accel-sim/traces/tesla-v100/latest/rodinia_2.0-ft.tgz`（21 MB，解压到 `hw_run/rodinia_2.0-ft/9.1`），做法参考 [`.github/scripts/main-docker.sh`](../../.github/scripts/main-docker.sh)。
+  - 没有 Slurm 时 `run_simulations.py` 自动改用本地 `procman.py`。
+  - 触发：代码改动的 push（`paths-ignore: docs/**, '**.md'`，提交笔记不触发）+ 手动触发。不做 tracer job（要 GPU，公开仓库不挂自托管 runner）。
+  - 待定：GitHub runner 只有 4 核、单 job 6 小时上限，先在本地给 rodinia 计时，必要时删减 app。
 
 ### 第 02 步：代码骨架与顶层数据流
 
