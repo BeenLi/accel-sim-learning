@@ -33,7 +33,7 @@
 | 10 | [统计、功耗与校准](docs/learning/10-0-stats-power-calibration-overview.md) |
 | 11 | [综合实验](docs/learning/11-0-experiments-overview.md) |
 
-每篇笔记按"概念 → 代码怎么建模 → 用日志或统计验证"展开。标 ✅ 的是直接从代码或配置读出的事实，标 ❓ 的是待核实。进度见学习计划里的勾选框。
+每篇笔记按"概念 → 代码怎么建模 → 用日志或统计验证"展开，按 [repo-learning-path](https://github.com/BeenLi/arch-reading-skills/tree/main/skills/repo-learning-path) 的流程编写（来自 [arch-reading-skills](https://github.com/BeenLi/arch-reading-skills)）。标 ✅ 的是直接从代码或配置读出的事实，标 ❓ 的是待核实。进度见学习计划里的勾选框。
 
 ## 仓库目录
 

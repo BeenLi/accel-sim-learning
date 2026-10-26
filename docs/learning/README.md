@@ -190,6 +190,7 @@
 
 | 内容 | 位置 |
 | --- | --- |
+| 笔记的写法 | [repo-learning-path](https://github.com/BeenLi/arch-reading-skills/tree/main/skills/repo-learning-path) skill（[arch-reading-skills](https://github.com/BeenLi/arch-reading-skills)） |
 | 学习笔记：00 GPU 基础 | [00 总览](00-0-gpu-basics-overview.md)（进行中） |
 | 图源说明 | [`figs/README.md`](figs/README.md) |
 | 仓库自带文档 | [`README-accel-sim.md`](../../README-accel-sim.md)（原版 README）、[`release.notes.md`](../../release.notes.md)、[`gpgpu-sim4.md`](../../gpu-simulator/gpgpu-sim4.md)、[`AccelWattch.md`](../../AccelWattch.md) |
